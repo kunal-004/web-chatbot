@@ -1,7 +1,6 @@
 const express = require("express");
 const path = require("path");
 const dotenv = require("dotenv");
-const cors = require("cors");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 dotenv.config();
@@ -9,7 +8,6 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
