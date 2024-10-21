@@ -1,0 +1,188 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background: #2d3e50;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column; /* Vertical arrangement */
+}
+
+.button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.conversation {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.box {
+  background: silver;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+#messages {
+  height: 400px;
+  overflow-y: auto;
+}
+
+.user-input {
+  display: flex;
+}
+
+.input-box {
+  flex: 1;
+  margin-right: 10px;
+}
+
+textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.conversation-list {
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  overflow-y: auto;
+}
+
+/* Add this to your CSS file */
+.user-message {
+  text-align: right; /* Align user messages to the right */
+  background-color: #e0f7fa; /* Light blue background for user messages */
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+.bot-message {
+  text-align: left; /* Align bot messages to the left */
+  background-color: #ffe0b2; /* Light orange background for bot messages */
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+.conversation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.conversation-link-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.conversation-link {
+  flex: 1;
+  padding: 8px 12px;
+  color: inherit;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.conversation-link:hover {
+  background-color: #007bff;
+}
+
+.conversation-link.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.conversation-title {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.delete-btn {
+  padding: 6px;
+  background: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-btn:hover {
+  opacity: 1;
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+/* Message styles */
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.user-message,
+.bot-message {
+  padding: 12px;
+  border-radius: 8px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.user-message {
+  background-color: #007bff;
+  color: white;
+  align-self: flex-end;
+}
+
+.bot-message {
+  background-color: #f0f0f0;
+  align-self: flex-start;
+}

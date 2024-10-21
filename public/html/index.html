@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A conversational AI system that listens, learns, and challenges" />
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha384-<insert-valid-integrity-hash>" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>ChatBot</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="box sidebar">
+            <div class="top">
+                <div class="button-container">
+                    <button class="button" onclick="new_conversation()">
+                        <i class="fa-solid fa-plus"></i>
+                        <span>New Conversation</span>
+                    </button>
+                    <button class="button" onclick="delete_conversations()">
+                        <i class="fa-solid fa-trash"></i>
+                        <span>Clear Conversations</span>
+                    </button>
+                </div>
+            </div>
+            <div id="conversation-list" class="conversation-list">
+            </div>
+        </div>
+        <div class="conversation">
+            <div class="box" id="messages"></div>
+            <div class="user-input">
+                <div class="box input-box">
+                    <textarea id="message-input" placeholder="Ask a question" cols="30" rows="10"
+                        style="white-space: pre-wrap"></textarea>
+                    <button id="submit-button" class="button" onclick="sendMessage()">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        // Add event listener for "Enter" key to send messages
+        document.getElementById("message-input").addEventListener("keypress", function (event) {
+            if (event.key === "Enter" && !event.shiftKey) {
+                event.preventDefault(); // Prevents adding a new line
+                sendMessage();
+            }
+        });
+    </script>
+</body>
+
+</html>
